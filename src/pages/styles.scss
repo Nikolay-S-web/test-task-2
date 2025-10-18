@@ -1,0 +1,79 @@
+@import './index/index.scss';
+* {
+    box-sizing: border-box;
+}
+:root {
+    // --rootFontSize: 16px;
+
+    // --iconSize: 30px;
+    // --inlineWrapperPadding: 120px;
+    // --wrapperMaxWidth: 1160px;
+
+    // --contentMinWidth: 320px;
+    // --pageMaxWidth: calc(var(--inlineWrapperPadding) * 2 + var(--wrapperMaxWidth));
+
+    // --primaryBgColor: #f9f8fd;
+
+    // --primaryTextColor: #22253b;
+    // --secondTextColor: #8e8e8e;
+
+    // --altBgColor: #eaf2f5;
+
+    // --secondAccentColor: #38bff2;
+    // --accentColor: #f15525;
+    // --buttonColor: var(--accentColor);
+
+    // --font-family: 'Gilroy', system-ui, sans-serif;
+
+    // @media (max-width: 1400px) {
+    //     --inlineWrapperPadding: 50px;
+    // }
+    // @media (max-width: 1024px) {
+    //     --inlineWrapperPadding: 30px;
+    // }
+    // @media (max-width: 768px) {
+    //     --inlineWrapperPadding: 20px;
+    // }
+    // @media (max-width: 425px) {
+    //     --inlineWrapperPadding: 10px;
+    // }
+
+    // font-size: var(--rootFontSize);
+    // font-family: var(--font-family);
+}
+
+body {
+    min-height: 2100px; // delete
+
+    // position: relative;
+    // width: 100%;
+    // min-width: var(--contentMinWidth, 320px);
+    // margin-inline: auto;
+    // background-color: var(--primaryBgColor);
+    // font-size: inherit;
+    // line-height: 1.5em;
+
+    // padding-top: 98px;
+
+    // @media (max-width: 768px) {
+    //     padding-top: 70px;
+    // }
+}
+
+// .main {
+//     position: relative;
+//     width: 100%;
+//     margin-inline: auto;
+//     max-width: var(--pageMaxWidth, 1400px);
+//     padding-inline: var(--inlineWrapperPadding, 120px);
+//     overflow-x: hidden;
+
+//     @media (min-width: 1400px) {
+//         mask-image: linear-gradient(
+//             to right,
+//             transparent 5%,
+//             black var(--inlineWrapperPadding) calc(100% - var(--inlineWrapperPadding)),
+//             transparent 95%
+//         );
+//     }
+// }

@@ -1,13 +1,115 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="ru">
+
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test_task</title>
-  </head>
-  <body>
-    <div id="app"></div>
+    <title>Commercial Property</title>
+</head>
+
+<body id="index">
+    <header class="header">
+        <div class="header__wrapper">
+
+            <h1 class="header__logo">
+                <a href="./index.html" class="logo link">
+                    <div class="logo__wrapper">
+                        <svg class="logo__icon svg svg--logo" aria-hidden="true" focusable="false">
+                            <use xlink:href="/__spritemap#sprite-logo"></use>
+                        </svg>
+                        <span class="logo__text">commercial property</span>
+                    </div>
+                </a>
+            </h1>
+
+            <nav class="header__navigation navigation navigation--desktop desktop" aria-label="основная навигация" aria-hidden="false" focusable="true">
+                <ul class="navigation__items">
+                    <li class="navigation__item"><a href="" class="link link--style_usual">купить</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual">снять</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual">инвестировать</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual">услуги</a></li>
+                    <li class="navigation__item"><a href="" class="link link--style_usual">контакты</a></li>
+                </ul>
+            </nav>
+
+            <section class="header__toolbar header-toolbarv desktop">
+                <ul class="header-toolbar__items">
+                    <li class="header-toolbar__item">
+                        <button type="button" class="header-toolbar__button button button--tool">
+                            <svg class="svg svg--letter" aria-label="чат">
+                                <use xlink:href="/__spritemap#sprite-letter"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="header-toolbar__item">
+                        <button type="button" class="header-toolbar__button button button--tool">
+                            <svg class="svg svg--search" aria-label="поиск">
+                                <use xlink:href="/__spritemap#sprite-search"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="header-toolbar__item header-toolbar__item--user">
+                        <button type="button" class="header-toolbar__button button button--tool">
+                            <!-- <img src="" data-user-image-src="./src/assets/images/user.jpg" alt="Аватар пользователя" class="user__avatar user__avatar--mobile"> -->
+                            <svg class="svg svg--profile" aria-label="профиль">
+                                <use xlink:href="/__spritemap#sprite-profile"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </section>
+
+            <button id="menu-button" class="header__menu-button menu-button" aria-expanded="false" aria-controls="mobile-menu" aria-haspopup="dialog" aria-label="Открыть меню">
+                <div class="menu-button__wrapper">
+                    <div class="menu-button__line"></div>
+                    <div class="menu-button__line"></div>
+                    <div class="menu-button__line"></div>
+                </div>
+            </button>
+
+            <div class="header__mobile-menu mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Основная навигация" aria-modal="true" role="dialog" aria-labelledby="menu-button">
+                <div class="mobile-menu__wrapper">
+
+                    <div class="mobile-menu__user user" data-has-user="true">
+                        <div class="user__wrapper">
+                            <img src="/src/assets/images/user.jpg" data-user-image-src="/src/assets/images/user.jpg" alt="Аватар пользователя" class="user__avatar user__avatar--mobile">
+                            <!-- <svg class="svg svg--profile" aria-label="профиль">
+                                <use xlink:href="/__spritemap#sprite-profile"></use>
+                            </svg> -->
+
+                            <div class="user__info user-info">
+                                <span class="user-info__name" data-user-name="Алина Макеева">Алина Макеева</span>
+                                <span class="user-info__email" data-user-email="@gmail.com">@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="mobile-menu__navigation navigation navigation--mobile">
+                        <ul class="navigation__items">
+                            <li class="navigation__item"><a href="" class="link link--style_usual">сообщения</a></li>
+                            <li class="navigation__item"><a href="" class="link link--style_usual">купить</a></li>
+                            <li class="navigation__item"><a href="" class="link link--style_usual">снять</a></li>
+                            <li class="navigation__item"><a href="" class="link link--style_usual">инвестировать</a></li>
+                            <li class="navigation__item"><a href="" class="link link--style_usual">услуги</a></li>
+                            <li class="navigation__item"><a href="" class="link link--style_usual">контакты</a></li>
+                        </ul>
+                    </nav>
+
+                    <button class="mobile-menu__close button button--menu" aria-label="Закрыть меню">Выход</button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="intro">
+
+        </section>
+    </main>
     <script type="module" src="/src/main.js"></script>
-  </body>
+
+</body>
+
 </html>

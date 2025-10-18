@@ -1,0 +1,22 @@
+.notice {
+    color: var(--primaryTextColor);
+    padding: 5px 10px;
+    width: fit-content;
+    margin-inline: auto;
+    position: fixed;
+    transition: 1s;
+    opacity: 0;
+    bottom: 8%;
+    max-width: 90%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    background-color: var(--altBgColor);
+    z-index: 100000;
+
+    &.active {
+        opacity: 1;
+    }
+}

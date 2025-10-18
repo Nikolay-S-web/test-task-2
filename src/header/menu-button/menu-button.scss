@@ -1,0 +1,48 @@
+.menu-button {
+    --transitionDuration: 0.5s;
+    --lineColor: #fff;
+    --activeLineColor: #c4c4c4;
+    --lineHeight: 5px;
+    --lineWidth: 43px;
+    --lastLineWidth: 30px;
+    --rowGap: 7px;
+
+    background-color: unset;
+    border: unset;
+    padding: 0;
+
+    &__wrapper {
+        padding: 5px;
+        display: grid;
+        row-gap: var(--rowGap);
+        justify-items: end;
+    }
+
+    &__line {
+        background-color: var(--lineColor);
+        height: var(--lineHeight);
+        width: var(--lineWidth);
+        position: relative;
+        &:last-child {
+            width: var(--lastLineWidth);
+        }
+        &::after {
+            content: '';
+            background-color: var(--activeLineColor);
+            display: block;
+            position: absolute;
+            width: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            transition-property: width;
+            transition-duration: var(--transitionDuration, 0.5s);
+        }
+    }
+
+    &.active {
+        .menu-button__line::after {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.link {
+    //     --linkActiveColor: var(--accentColor);
+
+    //     position: relative;
+
+    text-decoration: none;
+    color: #fff;
+
+    // &:active {
+    //     color: var(--linkActiveColor);
+    // }
+    //     @media (any-pointer: fine) {
+    //         transition: 0.3s;
+    //         &:hover {
+    //             color: var(--linkActiveColor);
+    //         }
+    //     }
+
+    //     &::before {
+    //         content: '';
+    //         position: absolute;
+    //         inset: -5px -10px;
+    //     }
+
+    //     &--style_usual {
+    //         font-size: 13px;
+    //         line-height: 104%;
+    //         text-align: center;
+    //         color: var(--primaryTextColor, #22253b);
+    //     }
+
+    //     &--phone {
+    //         font-size: 16px;
+    //         font-weight: 400;
+    //         line-height: 144%;
+    //         color: var(--secondAccentColor, #38bff2);
+    //         @media (max-width: 768px) {
+    //             font-size: 14px;
+    //             line-height: 164%;
+    //             text-align: center;
+    //         }
+    //     }
+
+    //     &--mail {
+    //         font-size: 16px;
+    //         line-height: 144%;
+    //         color: var(--primaryTextColor, #22253b);
+    //     }
+
+    //     &--policy {
+    //         font-weight: 400;
+    //         font-size: 16px;
+    //         line-height: 144%;
+    //         color: var(--secondTextColor, #8e8e8e);
+    //         @media (max-width: 768px) {
+    //             font-size: 12px;
+    //         }
+    //         @media (max-width: 425px) {
+    //             color: var(--linkActiveColor);
+    //         }
+    //     }
+    //     &--form {
+    //         color: var(--linkActiveColor);
+    //     }
+
+    //     &--icon {
+    //         display: block;
+    //         fill: #22253b;
+    //         &:active {
+    //             fill: var(--linkActiveColor);
+    //         }
+    //         @media (any-hover: hover) {
+    //             transition: 0.3s;
+    //             &:hover {
+    //                 fill: var(--linkActiveColor);
+    //             }
+    //         }
+    //     }
+    //     &--logo {
+    //         display: block;
+    //         &:active {
+    //             filter: drop-shadow(0 0 10px var(--linkActiveColor));
+    //         }
+    //         @media (any-hover: hover) {
+    //             transition: 0.3s;
+    //             &:hover {
+    //                 filter: drop-shadow(0 0 10px var(--linkActiveColor));
+    //             }
+    //         }
+    //     }
+}

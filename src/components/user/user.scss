@@ -1,0 +1,39 @@
+.user {
+    --column-gup: 22.45px;
+
+    font-family: var(--font-family);
+    &__wrapper {
+        display: flex;
+        column-gap: var(--column-gup);
+        margin-block: 32px;
+        margin-left: var(--margin-left, 24px);
+    }
+    &__avatar {
+        width: 92px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__info {
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__name {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            padding-bottom: 16px;
+            color: #0f2240;
+        }
+        &__email {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #5a5859;
+        }
+    }
+}

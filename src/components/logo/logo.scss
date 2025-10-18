@@ -1,0 +1,22 @@
+.logo {
+    --logoSize: 50px;
+
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+    text-transform: uppercase;
+    &__wrapper {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: max-content min-content;
+        column-gap: 7px;
+    }
+    &__icon {
+        width: 50px;
+        aspect-ratio: 1;
+    }
+    &__text {
+        width: min-content;
+    }
+}
