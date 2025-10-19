@@ -1,4 +1,6 @@
 const menuButton = document.querySelector('.header__menu-button');
+const closeButton = document.querySelector('.mobile-menu__close');
+
 const headerMobileMenu = document.querySelector('.header__mobile-menu');
 
 const defaultLabel = 'открыть меню';
@@ -30,3 +32,4 @@ function toggleScroll(element) {
 }
 
 menuButton.addEventListener('click', clickHandler);
+closeButton.addEventListener('click', clickHandler);

@@ -13,9 +13,14 @@
         aspect-ratio: 1;
         border-radius: 50%;
         object-fit: cover;
+
+        &--mobile {
+            object-position: left 80% top 50%;
+        }
     }
 
     &__info {
+        padding-bottom: 11px;
     }
 
     &-info {
@@ -26,7 +31,7 @@
             font-weight: 500;
             font-size: 18px;
             line-height: 24px;
-            padding-bottom: 16px;
+            padding-bottom: 3px;
             color: #0f2240;
         }
         &__email {

@@ -36,6 +36,22 @@
         font-weight: 700;
         font-size: 22px;
         line-height: 114%;
-        color: #fff;
+    }
+
+    &--landmark {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 112%;
+    }
+
+    &--promotion {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 75%;
+        color: #0f2240;
+        @media (max-width: 480px) {
+            font-size: 22px;
+            line-height: 114%;
+        }
     }
 }
