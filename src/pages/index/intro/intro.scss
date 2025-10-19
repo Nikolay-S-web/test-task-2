@@ -1,2 +1,97 @@
 .intro {
+    background-image: url('/src/assets/images/1920x1200-208329-panoramic-shot-of-a-city-skyline-with-modern-skysc\ 1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    background-attachment: local;
+    @media (max-width: 1280px) {
+        background-position: left 50% bottom 400px;
+    }
+
+    &__wrapper {
+        max-width: calc(var(--contentMaxWidth, 1190px) + var(--wrapperPaddingInline) * 2);
+        width: 100%;
+        margin-inline: auto;
+        padding-block: 144px 287px;
+        display: grid;
+        grid-auto-flow: column;
+
+        @media (max-width: 1280px) {
+            padding-right: 0;
+            // padding-inline: var(--wrapperPaddingInline, 30px);
+            grid-auto-flow: row;
+        }
+        @media (max-width: 1280px) {
+            padding-block: 82px 236px;
+        }
+    }
+
+    &__info {
+        padding-inline: var(--wrapperPaddingInline, 30px);
+        margin-top: 96px;
+        @media (max-width: 1280px) {
+            padding-bottom: 50px;
+        }
+        @media (max-width: 1024px) {
+            // row-gap: 16px;
+            padding-bottom: 100px;
+        }
+        @media (max-width: 840px) {
+            padding-inline: 10px;
+        }
+        @media (max-width: 640px) {
+            padding-bottom: 234px;
+        }
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        @media (max-width: 1280px) {
+            align-items: center;
+        }
+        @media (max-width: 1024px) {
+            row-gap: 16px;
+        }
+        @media (max-width: 680px) {
+            row-gap: 28px;
+        }
+        &__title {
+            @media (max-width: 1280px) {
+                text-align: center;
+            }
+        }
+        &__text {
+            @media (max-width: 1280px) {
+                text-align: center;
+                padding-inline: 30px;
+            }
+        }
+        &__button {
+            margin-top: 86px;
+            padding: 22px 50px;
+            @media (max-width: 640px) {
+                margin-top: 78px;
+                padding: 8px 30px;
+            }
+        }
+    }
+
+    &__search-form {
+        background-color: #e6abab;
+        margin-inline: var(--wrapperPaddingInline, 30px);
+        max-width: 346px;
+        justify-self: end;
+        @media (max-width: 1280px) {
+            max-width: unset;
+            justify-self: unset;
+        }
+        @media (max-width: 768px) {
+            margin-inline: unset;
+        }
+        // width: 346px;
+        // min-height: 594px;
+        overflow: hidden; //delete
+    }
 }

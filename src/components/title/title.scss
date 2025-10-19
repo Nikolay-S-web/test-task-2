@@ -1,0 +1,41 @@
+.title {
+    font-family: var(--font-family);
+    color: #fff;
+
+    &__inner {
+        &--smaller {
+            font-size: 44px;
+            line-height: 150%;
+            @media (max-width: 1280px) {
+                font-size: 40px;
+            }
+            @media (max-width: 840px) {
+                font-size: 28px;
+            }
+            @media (max-width: 640px) {
+                font-size: 19px;
+            }
+        }
+    }
+    &--large {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 108%;
+        @media (max-width: 1280px) {
+            font-size: 56px;
+        }
+        @media (max-width: 840px) {
+            font-size: 44px;
+        }
+        @media (max-width: 640px) {
+            font-size: 34px;
+        }
+    }
+    &--middle {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 114%;
+        color: #fff;
+    }
+}

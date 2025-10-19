@@ -1,12 +1,42 @@
 .button {
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    outline: none;
     cursor: pointer;
+
+    &--reset {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        padding: 0;
+    }
 
     &--menu {
         text-align: left;
+    }
+
+    &--intro,
+    &--submit {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        background: linear-gradient(180deg, #245194 0%, #1e69d9 100%);
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 120%;
+        color: #fff;
+    }
+    &--intro {
+        @media (max-width: 640px) {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 187%;
+        }
+    }
+    &--submit {
+        color: #fff;
+        font-size: 18px;
+        line-height: 167%;
+        text-transform: uppercase;
+        border: 2px solid #4185ea;
     }
 
     // &:focus-visible {

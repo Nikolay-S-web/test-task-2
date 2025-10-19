@@ -36,21 +36,21 @@
             <section class="header__toolbar header-toolbarv desktop">
                 <ul class="header-toolbar__items">
                     <li class="header-toolbar__item">
-                        <button type="button" class="header-toolbar__button button button--tool">
+                        <button type="button" class="header-toolbar__button button button--tool button--reset">
                             <svg class="svg svg--letter" aria-label="чат">
                                 <use xlink:href="/__spritemap#sprite-letter"></use>
                             </svg>
                         </button>
                     </li>
                     <li class="header-toolbar__item">
-                        <button type="button" class="header-toolbar__button button button--tool">
+                        <button type="button" class="header-toolbar__button button button--tool button--reset">
                             <svg class="svg svg--search" aria-label="поиск">
                                 <use xlink:href="/__spritemap#sprite-search"></use>
                             </svg>
                         </button>
                     </li>
                     <li class="header-toolbar__item header-toolbar__item--user">
-                        <button type="button" class="header-toolbar__button button button--tool">
+                        <button type="button" class="header-toolbar__button button button--tool button--reset">
                             <!-- <img src="" data-user-image-src="./src/assets/images/user.jpg" alt="Аватар пользователя" class="user__avatar user__avatar--mobile"> -->
                             <svg class="svg svg--profile" aria-label="профиль">
                                 <use xlink:href="/__spritemap#sprite-profile"></use>
@@ -96,7 +96,7 @@
                         </ul>
                     </nav>
 
-                    <button class="mobile-menu__close button button--menu" aria-label="Закрыть меню">Выход</button>
+                    <button class="mobile-menu__close button button--menu button--reset" aria-label="Закрыть меню">Выход</button>
 
                 </div>
             </div>
@@ -105,7 +105,169 @@
 
     <main class="main">
         <section class="intro">
+            <div class="intro__wrapper">
 
+                <section class="intro__info intro-info">
+                    <h1 class="intro-info__title title title--large title--first-line-greater">
+                        Лучший&nbsp;выбор<br><span class="title__inner title__inner--smaller">коммерческой&nbsp;недвижимости</span>
+                    </h1>
+                    <p class="intro-info__text text text--intro">Актуальные&nbsp;предложения рынка&nbsp;недвижимости по&nbsp;всему&nbsp;миру</p>
+                    <button class="intro-info__button button button--intro">Узнать больше</button>
+                </section>
+
+                <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="intro__search-form form">
+                    <div class="form__wrapper">
+
+                        <fieldset class="form__typeset form-typeset">
+                            <label for="serch-type-rent" class="form-typeset__label">
+                                <input id="serch-type-rent" type="radio" name='search-type' class="form__radio" value="rent" hidden>
+                                <span class="form-typeset__text">снять</span>
+                            </label>
+                            <label for="serch-type-buy" class="form-typeset__label">
+                                <input id="serch-type-buy" type="radio" name='search-type' class="form__radio" value="buy" checked hidden>
+                                <span class="form-typeset__text">купить</span>
+                            </label>
+                        </fieldset>
+
+                        <div class="form__select-menu select-menu">
+                            <span class="form__label ">Страна</span>
+                            <div class="select-menu__field">
+                                <span class="select-menu__choice"></span>
+                                <svg class="select-menu__arrow-icon svg" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="/__spritemap#sprite-arrow"></use>
+                                </svg>
+                                <ul class="select-menu__list">
+                                    <li class="select-menu__item">Россия</li>
+                                    <li class="select-menu__item">Грузия</li>
+                                    <li class="select-menu__item">Турция</li>
+                                    <li class="select-menu__item">Греция</li>
+                                    <li class="select-menu__item">Чехия</li>
+                                    <li class="select-menu__item">Франция</li>
+                                    <li class="select-menu__item">Германия</li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="select-contry" value="">
+                        </div>
+
+                        <div class="form__select-menu select-menu">
+                            <span class="form__label">Категория</span>
+                            <div class="select-menu__field">
+                                <span class="select-menu__choice"></span>
+                                <svg class="select-menu__arrow-icon svg" aria-hidden="true">
+                                    <use xlink:href="/__spritemap#sprite-arrow"></use>
+                                </svg>
+                                <ul class="select-menu__list">
+                                    <li class="select-menu__item">Офисные помещения</li>
+                                    <li class="select-menu__item">Торговые помещения</li>
+                                    <li class="select-menu__item">Производственные помещения</li>
+                                    <li class="select-menu__item">Складские помещения</li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="select-type" value="">
+                        </div>
+
+
+
+                        <div class="form__range form-range">
+                            <span class="form__label">Площадь</span>
+                            <div class="form-range__header">
+                                <output class="form-range__value"></output>
+                            </div>
+                            <input class="form-range__input" type="range" name="square" value="125000" min="0" max="500000" step="100">
+                            <div class="form-range__footer">
+                                <span class="form-range__min"></span>
+                                <span class="form-range__max"></span>
+                            </div>
+                        </div>
+
+                        <fieldset class="form__price-set form-price-set">
+                            <span class="form__label">Цена руб. в месяц</span>
+                            <div class="form-price-set__fields">
+                                <input type="number" name='price-from' class="form-price-set__input" value="" placeholder="ОТ">
+                                <span class="form-price-set__dash"></span>
+                                <input type="number" name='price-to' class="form-price-set__input" value="" placeholder="ДО">
+                            </div>
+                        </fieldset>
+
+                        <div class="form__filters-toggle filters-toggle">
+                            <span class="filters-toggle__label">Дополнительные фильтры</span>
+                            <button type="button" class="filters-toggle__button button button--reset">
+                                <svg class="svg svg--search-filter" aria-label="поиск">
+                                    <use xlink:href="/__spritemap#sprite-search-filter"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <button type="submit" class="form__submit button button--submit">найти</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+        <section class="banner swiper">
+            <div class="banner__wrapper swiper-wrapper">
+
+                <article class="banner__slide slide swiper-slide">
+                    <div class="slide__wrapper">
+                        <h2 class="slide__title slide-title title title--middle">
+                            <span class="slide-title__image">
+                                <svg class="svg svg--banner-image" aria-hidden="true" focusable="false">
+                                    <use xlink:href="/__spritemap#sprite-slide1"></use>
+                                </svg>
+                            </span>
+                            <span class="slide-title__text">Представление интересов покупателя</span>
+                        </h2>
+                        <ul class="slide__content slide-content">
+                            <li class="slide-content__item text text--size-s">Анализ рынка</li>
+                            <li class="slide-content__item text text--size-s">Подбор объектов</li>
+                            <li class="slide-content__item text text--size-s">Технический аудит</li>
+                            <li class="slide-content__item text text--size-s">SWOT-анализ</li>
+                            <li class="slide-content__item text text--size-s">Поддержка и консультации на всех этапах сделки</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="banner__slide slide swiper-slide">
+                    <div class="slide__wrapper">
+                        <h2 class="slide__title slide-title title title--middle">
+                            <span class="slide-title__image">
+                                <svg class="svg svg--banner-image" aria-hidden="true" focusable="false">
+                                    <use xlink:href="/__spritemap#sprite-slide2"></use>
+                                </svg>
+                            </span>
+                            <span class="slide-title__text">Управление недвижимостью</span>
+                        </h2>
+                        <ul class="slide__content slide-content">
+                            <li class="slide-content__item text text--size-s">Разработка стратегии</li>
+                            <li class="slide-content__item text text--size-s">Повышение доходности</li>
+                            <li class="slide-content__item text text--size-s">Оценка текущей деятельности</li>
+                            <li class="slide-content__item text text--size-s">Реконцепция актива</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="banner__slide slide swiper-slide">
+                    <div class="slide__wrapper">
+                        <h2 class="slide__title slide-title title title--middle">
+                            <span class="slide-title__image">
+                                <svg class="svg svg--banner-image" aria-hidden="true" focusable="false">
+                                    <use xlink:href="/__spritemap#sprite-slide3"></use>
+                                </svg>
+                            </span>
+                            <span class="slide-title__text">Инвестиции в недвижимость</span>
+                        </h2>
+                        <ul class="slide__content slide-content">
+                            <li class="slide-content__item text text--size-s">Инвестиции во все сегменты недвижимости</li>
+                            <li class="slide-content__item text text--size-s">Арендный бизнес с высокой доходностью</li>
+                            <li class="slide-content__item text text--size-s">Покупка недвижимости под редевелопмент</li>
+                            <li class="slide-content__item text text--size-s">Соинвестирование строительства</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+            <div class="swiper-pagination banner__pagination"></div>
         </section>
     </main>
     <script type="module" src="/src/main.js"></script>
