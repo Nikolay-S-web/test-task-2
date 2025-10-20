@@ -26,6 +26,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
 
     &::before {
         z-index: -1;
@@ -35,7 +36,7 @@
         background-image: linear-gradient(180deg, #175ec7 0%, #0bc4ff 90%, transparent);
         opacity: var(--headerBeforeOpacity, 0);
         transition-property: opacity;
-        transition-duration: var(--transitionDuration, 0.5s);
+        transition-duration: var(--transitionDuration);
     }
 
     &.scrolled {
@@ -45,6 +46,15 @@
         --toolBarMarginTop: 0;
     }
 
+    &__logo {
+        transition-property: text-shadow;
+        transition-duration: var(--transitionDuration);
+        &:hover {
+            @media (any-pointer: fine) {
+                text-shadow: 0 0 10px #000;
+            }
+        }
+    }
     &__wrapper {
         width: 100%;
         min-height: calc(var(--headerHeight) + var(--headerPaddingBlock) * 2);
@@ -64,6 +74,7 @@
             min-height: auto;
         }
     }
+
     &__navigation {
         margin-right: 79px;
         margin-top: var(--navigationMarginTop);

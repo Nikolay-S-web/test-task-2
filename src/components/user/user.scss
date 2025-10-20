@@ -32,7 +32,7 @@
             font-size: 18px;
             line-height: 24px;
             padding-bottom: 3px;
-            color: #0f2240;
+            color: var(--secondTextColor, #0f2240);
         }
         &__email {
             font-weight: 400;

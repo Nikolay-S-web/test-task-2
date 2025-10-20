@@ -1,19 +1,2 @@
 @import './pages/styles.scss';
 @import './header/header.scss';
-
-:root {
-    --wrapperPaddingInline: 30px;
-
-    --contentMaxWidth: 1190px;
-    --contentMinWidth: 355px;
-
-    // --wrapperMaxWidth: calc(var(--contentMaxWidth) + var(wrapperPaddingInline));
-    // --wrapperMinWidth: 320px;
-
-    --font-family: 'Roboto', sans-serif, system-ui;
-    --second-family: 'Montserrat', sans-serif, system-ui;
-
-    // @media (max-width: 1024px) {
-    //     font-size: 14px;
-    // }
-}

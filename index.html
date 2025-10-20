@@ -51,7 +51,6 @@
                     </li>
                     <li class="header-toolbar__item header-toolbar__item--user">
                         <button type="button" class="header-toolbar__button button button--tool button--reset">
-                            <!-- <img src="" data-user-image-src="./src/assets/images/user.jpg" alt="Аватар пользователя" class="user__avatar user__avatar--mobile"> -->
                             <svg class="svg svg--profile" aria-label="профиль">
                                 <use xlink:href="/__spritemap#sprite-profile"></use>
                             </svg>
@@ -68,12 +67,17 @@
                 </div>
             </button>
 
-            <div class="header__mobile-menu mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Основная навигация" aria-modal="true" role="dialog" aria-labelledby="menu-button">
+            <section class="header__mobile-menu mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="меню навигации" aria-modal="true" role="dialog" aria-labelledby="menu-button">
                 <div class="mobile-menu__wrapper">
 
                     <div class="mobile-menu__user user" data-has-user="true">
                         <div class="user__wrapper">
-                            <img src="/src/assets/images/user.jpg" data-user-image-src="/src/assets/images/user.jpg" alt="Аватар пользователя" class="user__avatar user__avatar--mobile">
+                            <picture>
+                                <source srcset="./src/assets/images/user.avif" type="image/avif">
+                                <source srcset="./src/assets/images/user.webp" type="image/webp">
+                                <img src="./src/assets/images/user.jpg" data-user-image-src="/src/assets/images/user.jpg" alt="Аватар пользователя" class="user__avatar user__avatar--mobile"
+                                    loading="lazy">
+                            </picture>
 
                             <div class="user__info user-info">
                                 <span class="user-info__name" data-user-name="Алина Макеева">Алина Макеева</span>
@@ -96,7 +100,7 @@
                     <button class="mobile-menu__close button button--menu button--reset" aria-label="Закрыть меню">Выход</button>
 
                 </div>
-            </div>
+            </section>
         </div>
     </header>
 
@@ -109,7 +113,7 @@
                         Лучший&nbsp;выбор<br><span class="title__inner title__inner--smaller">коммерческой&nbsp;недвижимости</span>
                     </h1>
                     <p class="intro-info__text text text--intro">Актуальные&nbsp;предложения рынка&nbsp;недвижимости по&nbsp;всему&nbsp;миру</p>
-                    <button class="intro-info__button button button--intro">Узнать больше</button>
+                    <button class="intro-info__button button button--type-a">Узнать больше</button>
                 </section>
 
                 <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="intro__search-form form">
@@ -195,7 +199,7 @@
                             </button>
                         </div>
 
-                        <button type="submit" class="form__submit button button--submit">найти</button>
+                        <button type="submit" class="form__submit button button--type-a">найти</button>
                     </div>
 
                 </form>
@@ -269,64 +273,88 @@
         <section class="promotion">
             <div class="promotion__wrapper">
                 <h2 class="promotion__title title title--promotion">Популярные&nbsp;предложения по&nbsp;всему&nbsp;миру</h2>
-                <section class="promotion__galary promotion-galary">
-                    <div class="promotion-galary__wrapper">
+                <section class="promotion__gallery promotion-gallery">
+                    <div class="promotion-gallery__wrapper">
 
-                        <a href="" class="promotion-galary__item">
-                            <img src="./src/assets/images/European-Real-Estate1 1.jpg" alt="Европа" class="promotion-galary__image">
-                            <div class="promotion-galary__description">
-                                <h3 class="promotion-galary__landmark title title--landmark">Европа</h3>
-                                <p class="promotion-galary__quantity text text--promotion">7 850 предложений</p>
+                        <a href="" class="promotion-gallery__item link" aria-label="недвижимость в Европе">
+                            <picture class="promotion-gallery__image-box">
+                                <source srcset="./src/assets/images/europe.avif" type="image/avif">
+                                <source srcset="./src/assets/images/europe.webp" type="image/webp">
+                                <img src="./src/assets/images/europe.jpg" alt="Европа" class="promotion-gallery__image" loading="lazy">
+                            </picture>
+                            <div class="promotion-gallery__description">
+                                <h3 class="promotion-gallery__landmark title title--landmark">Европа</h3>
+                                <p class="promotion-gallery__quantity text text--promotion">7 850 предложений</p>
                             </div>
                         </a>
 
-                        <a href="" class="promotion-galary__item promotion-galary__item--all">
-                            <img src="./src/assets/images/com 2.jpg" alt="Европа" class="promotion-galary__image">
-                            <div class="promotion-galary__description">
-                                <h3 class="promotion-galary__landmark title title--landmark">Все предложения</h3>
-                                <p class="promotion-galary__quantity text text--promotion">10 325 предложений</p>
+                        <a href="" class="promotion-gallery__item promotion-gallery__item--all link" aria-label="Все предложения">
+                            <picture class="promotion-gallery__image-box">
+                                <source srcset="./src/assets/images/com 2.avif" type="image/avif">
+                                <source srcset="./src/assets/images/com 2.webp" type="image/webp">
+                                <img src="./src/assets/images/com 2.jpg" alt="" class="promotion-gallery__image" loading="lazy">
+                            </picture>
+                            <div class="promotion-gallery__description">
+                                <h3 class="promotion-gallery__landmark title title--landmark">Все предложения</h3>
+                                <p class="promotion-gallery__quantity text text--promotion">10 325 предложений</p>
                             </div>
                         </a>
 
-                        <a href="" class="promotion-galary__item">
-                            <img src="./src/assets/images/1_GTC8mSQR4lN14vKk9KtoPg 1.jpg" alt="Европа" class="promotion-galary__image">
-                            <div class="promotion-galary__description">
-                                <h3 class="promotion-galary__landmark title title--landmark">Северная Америка</h3>
-                                <p class="promotion-galary__quantity text text--promotion">1 370 предложений</p>
+                        <a href="" class="promotion-gallery__item link" aria-label="недвижимость в Северной Америке">
+                            <picture class="promotion-gallery__image-box">
+                                <source srcset="./src/assets/images/north america.avif" type="image/avif">
+                                <source srcset="./src/assets/images/north america.webp" type="image/webp">
+                                <img src="./src/assets/images/north america.jpg" alt="Северная Америка" class="promotion-gallery__image" loading="lazy">
+                            </picture>
+                            <div class="promotion-gallery__description">
+                                <h3 class="promotion-gallery__landmark title title--landmark">Северная Америка</h3>
+                                <p class="promotion-gallery__quantity text text--promotion">1 370 предложений</p>
                             </div>
                         </a>
 
-                        <a href="" class="promotion-galary__item">
-                            <img src="./src/assets/images/Amarla-Sunset-Cartagena-City-View-From-Hotel 1.jpg" alt="Европа" class="promotion-galary__image">
-                            <div class="promotion-galary__description">
-                                <h3 class="promotion-galary__landmark title title--landmark">Южная Америка</h3>
-                                <p class="promotion-galary__quantity text text--promotion">260 предложений</p>
+                        <a href="" class="promotion-gallery__item link" aria-label="недвижимость в Южной Америке">
+                            <picture class="promotion-gallery__image-box">
+                                <source srcset="./src/assets/images/south america.avif" type="image/avif">
+                                <source srcset="./src/assets/images/south america.webp" type="image/webp">
+                                <img src="./src/assets/images/south america.jpg" alt="Южная Америка" class="promotion-gallery__image" loading="lazy">
+                            </picture>
+                            <div class="promotion-gallery__description">
+                                <h3 class="promotion-gallery__landmark title title--landmark">Южная Америка</h3>
+                                <p class="promotion-gallery__quantity text text--promotion">260 предложений</p>
                             </div>
                         </a>
 
-                        <a href="" class="promotion-galary__item">
-                            <img src="./src/assets/images/unnamed 1.jpg" alt="Европа" class="promotion-galary__image">
-                            <div class="promotion-galary__description">
-                                <h3 class="promotion-galary__landmark title title--landmark ">Азия</h3>
-                                <p class="promotion-galary__quantity text text--promotion">820 предложений</p>
+                        <a href="" class="promotion-gallery__item link" aria-label="недвижимость в Азии">
+                            <picture class="promotion-gallery__image-box">
+                                <source srcset="./src/assets/images/asia.avif" type="image/avif">
+                                <source srcset="./src/assets/images/asia.webp" type="image/webp">
+                                <img src="./src/assets/images/asia.jpg" alt="Азия" class="promotion-gallery__image" loading="lazy">
+                            </picture>
+                            <div class="promotion-gallery__description">
+                                <h3 class="promotion-gallery__landmark title title--landmark ">Азия</h3>
+                                <p class="promotion-gallery__quantity text text--promotion">820 предложений</p>
                             </div>
                         </a>
 
-                        <a href="" class="promotion-galary__item">
-                            <img src="./src/assets/images/australia.jpg" alt="Европа" class="promotion-galary__image">
-                            <div class="promotion-galary__description">
-                                <h3 class="promotion-galary__landmark title title--landmark">Австралия</h3>
-                                <p class="promotion-galary__quantity text text--promotion">25 предложений</p>
+                        <a href="" class="promotion-gallery__item link" aria-label="недвижимость в Австралии">
+                            <picture class="promotion-gallery__image-box">
+                                <source srcset="./src/assets/images/australia.avif" type="image/avif">
+                                <source srcset="./src/assets/images/australia.webp" type="image/webp">
+                                <img src="./src/assets/images/australia.jpg" alt="Австралия" class="promotion-gallery__image" loading="lazy">
+                            </picture>
+                            <div class="promotion-gallery__description">
+                                <h3 class="promotion-gallery__landmark title title--landmark">Австралия</h3>
+                                <p class="promotion-gallery__quantity text text--promotion">25 предложений</p>
                             </div>
                         </a>
 
                     </div>
                 </section>
-                <button type="button" class="promotion__button button button--promotion">Все предложения</button>
+                <button type="button" class="promotion__button button button--type-a">Все предложения</button>
             </div>
         </section>
     </main>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 
 </body>
 

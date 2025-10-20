@@ -14,11 +14,24 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 167%;
-        color: #0f2240;
+        color: var(--secondTextColor, #0f2240);
     }
 
-    &--intro,
-    &--submit {
+    &--tool {
+        & svg {
+            transition-property: filter;
+            transition-duration: 0.5s;
+        }
+        &:hover {
+            @media (any-pointer: fine) {
+                & svg {
+                    filter: drop-shadow(0 0 5px #000);
+                }
+            }
+        }
+    }
+
+    &--type-a {
         border: none;
         background-color: transparent;
         outline: none;
@@ -27,48 +40,21 @@
         font-weight: 500;
         font-size: 25px;
         line-height: 120%;
-        color: #fff;
-    }
-    &--intro {
-        @media (max-width: 640px) {
-            font-weight: 500;
+        color: var(--primaryTextColor, #fff);
+        outline: 2px solid transparent;
+        transition-property: outline;
+        transition-duration: 0.5s;
+        &:active {
+            background: linear-gradient(180deg, #175ec7 0%, #0bc4ff 100%);
+        }
+        @media (any-pointer: fine) {
+            &:hover {
+                outline-color: #fff;
+            }
+        }
+        @media (max-width: 680px) {
             font-size: 16px;
             line-height: 187%;
         }
     }
-    &--submit {
-        color: #fff;
-        font-size: 18px;
-        line-height: 167%;
-        text-transform: uppercase;
-        border: 2px solid #4185ea;
-    }
-
-    &--promotion {
-        background-image: linear-gradient(180deg, #245194 0%, #1e69d9 100%);
-        border: none;
-
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 187%;
-        color: #fff;
-    }
-
-    // &:focus-visible {
-    //     color: $blue-color;
-    //     background-color: $white-color;
-    //     border-color: $blue-color;
-    // }
-
-    // &:hover {
-    //     color: $blue-color;
-    //     background-color: $white-color;
-    //     border-color: $blue-color;
-    // }
-
-    // &:active {
-    //     color: $white-color;
-    //     background-color: $active-color;
-    //     border-color: $white-color;
-    // }
 }

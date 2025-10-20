@@ -1,6 +1,6 @@
 .title {
     font-family: var(--font-family);
-    color: #fff;
+    color: var(--primaryTextColor, #fff);
 
     &__inner {
         &--smaller {
@@ -48,7 +48,7 @@
         font-weight: 700;
         font-size: 28px;
         line-height: 75%;
-        color: #0f2240;
+        color: var(--secondTextColor, #0f2240);
         @media (max-width: 480px) {
             font-size: 22px;
             line-height: 114%;

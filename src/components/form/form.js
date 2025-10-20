@@ -1,2 +1,2 @@
 import './select-menu/select-menu';
-import './range-slider/range-slider';
+import './form-range/form-range';

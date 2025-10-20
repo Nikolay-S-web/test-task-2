@@ -3,7 +3,7 @@
     font-weight: 400;
     font-size: 25px;
     line-height: 120%;
-    color: #fff;
+    color: var(--primaryTextColor, #fff);
     @media (max-width: 640px) {
         font-size: 15px;
         line-height: 133%;
@@ -24,6 +24,6 @@
     &--mobile {
         font-size: 16px;
         line-height: 187%;
-        color: #0f2240;
+        color: var(--secondTextColor, #0f2240);
     }
 }

@@ -2,30 +2,23 @@
 @import './intro/intro.scss';
 @import './banner/banner.scss';
 @import './promotion/promotion.scss';
-// @import './learning_technique/learning_technique.scss';
-// @import './galary/galary.scss';
-// @import './location/location.scss';
-// @import './call_order/call_order.scss';
 
 body {
     background-color: #fff;
-    // background-image: url('../../assets/images/1920x1200-208329-panoramic-shot-of-a-city-skyline-with-modern-skysc 1.jpg'),
-    //     url('../../assets/images/01 1.jpg');
-
     font-family: var(--font-family);
     min-width: var(--contentMinWidth, 320px);
 }
 main {
-    background-image: url('../../assets/images/01\ 1.jpg');
+    background-image: url('../../assets/images/bg2.jpg');
+    background-image: image-set(
+        url('../../assets/images/bg2.avif') type('image/avif'),
+        url('../../assets/images/bg2.webp') type('image/webp'),
+        url('../../assets/images/bg2.jpg') type('image/jpeg')
+    );
     background-position: left 50% bottom 90px;
     background-repeat: no-repeat;
     background-size: contain;
-    // background-position: 0 -170px, 0 764px;
     @media (max-width: 1280px) {
         background-image: unset;
-        // background-image: url('/src/assets/images/1920x1200-208329-panoramic-shot-of-a-city-skyline-with-modern-skysc\ 1.jpg');
-        // background-repeat: no-repeat;
-        // background-size: 100%;
-        // background-position-y: -172px;
     }
 }

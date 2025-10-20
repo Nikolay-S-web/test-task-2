@@ -11,7 +11,16 @@
     border: unset;
     padding: 0;
 
+    @media (any-pointer: fine) {
+        &:hover {
+            & .menu-button__line {
+                background-color: #0bc4ff;
+            }
+        }
+    }
+
     &__wrapper {
+        margin-right: 3px;
         display: grid;
         row-gap: var(--rowGap);
         justify-items: end;
@@ -22,6 +31,9 @@
         height: var(--lineHeight);
         width: var(--lineWidth);
         position: relative;
+        transition-property: background-color;
+        transition-duration: var(--transitionDuration, 0.5s);
+
         &:last-child {
             width: var(--lastLineWidth);
         }

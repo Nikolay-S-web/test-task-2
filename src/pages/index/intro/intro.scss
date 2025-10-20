@@ -1,11 +1,42 @@
 .intro {
-    background-image: url('/src/assets/images/1920x1200-208329-panoramic-shot-of-a-city-skyline-with-modern-skysc\ 1.jpg');
+    background-image: url('/src/assets/images/bg1920.jpg');
+    background-image: image-set(
+        url('/src/assets/images/bg1920.avif') type('image/avif'),
+        url('/src/assets/images/bg1920.webp') type('image/webp'),
+        url('/src/assets/images/bg1920.jpg') type('image/jpeg')
+    );
+    background-position: left 50% bottom 400px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: bottom;
     background-attachment: local;
     @media (max-width: 1280px) {
-        background-position: left 50% bottom 400px;
+        background-image: url('/src/assets/images/bg1280.jpg');
+        background-image: image-set(
+            url('/src/assets/images/bg1280.avif') type('image/avif'),
+            url('/src/assets/images/bg1280.webp') type('image/webp'),
+            url('/src/assets/images/bg1280.jpg') type('image/jpeg')
+        );
+    }
+    @media (max-width: 768px) {
+        background-size: auto;
+        background-image: url('/src/assets/images/bg768.jpg');
+        background-image: image-set(
+            url('/src/assets/images/bg768.avif') type('image/avif'),
+            url('/src/assets/images/bg768.webp') type('image/webp'),
+            url('/src/assets/images/bg768.jpg') type('image/jpeg')
+        );
+        background-position: left 50% top -100px;
+    }
+    @media (max-width: 375px) {
+        background-size: contain;
+        background-image: url('/src/assets/images/bg375.jpg');
+        background-image: image-set(
+            url('/src/assets/images/bg375.avif') type('image/avif'),
+            url('/src/assets/images/bg375.webp') type('image/webp'),
+            url('/src/assets/images/bg375.jpg') type('image/jpeg')
+        );
+        background-position: left 50% top 0;
     }
 
     &__wrapper {
@@ -18,7 +49,6 @@
 
         @media (max-width: 1280px) {
             padding-right: 0;
-            // padding-inline: var(--wrapperPaddingInline, 30px);
             grid-auto-flow: row;
         }
         @media (max-width: 1280px) {
@@ -71,6 +101,9 @@
         &__button {
             margin-top: 86px;
             padding: 22px 50px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 187%;
             @media (max-width: 640px) {
                 margin-top: 78px;
                 padding: 8px 30px;
@@ -79,7 +112,7 @@
     }
 
     &__search-form {
-        background-color: #e6abab;
+        overflow: hidden;
         margin-inline: var(--wrapperPaddingInline, 30px);
         max-width: 346px;
         justify-self: end;
@@ -90,8 +123,5 @@
         @media (max-width: 768px) {
             margin-inline: unset;
         }
-        // width: 346px;
-        // min-height: 594px;
-        overflow: hidden; //delete
     }
 }

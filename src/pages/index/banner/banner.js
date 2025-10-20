@@ -12,23 +12,13 @@ const swiper = new Swiper('.swiper', {
     },
     breakpoints: {
         640: {
-            slidesPerView: 1, // Для мобильных устройств
+            slidesPerView: 1,
         },
         864: {
-            slidesPerView: 2, // Для планшетов
+            slidesPerView: 2,
         },
-        // 1024: {
-        //     slidesPerView: 2, // Для десктопов
-        // },
         1280: {
-            slidesPerView: 3, // Для больших экранов
-        },
-    },
-    on: {
-        // Дополнительное обновление высоты после инициализации
-        init: function () {
-            this.updateAutoHeight();
+            slidesPerView: 3,
         },
     },
 });
-console.log('ok');
