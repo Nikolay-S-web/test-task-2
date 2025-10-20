@@ -32,9 +32,9 @@ export default defineConfig({
                 quality: 80,
             },
         }),
-        // ghPages({
-        //     branch: 'gh-pages',
-        // }),
+        ghPages({
+            branch: 'gh-pages',
+        }),
     ],
     css: {
         postcss: {
