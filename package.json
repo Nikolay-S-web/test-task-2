@@ -19,6 +19,7 @@
         "last 2 versions"
     ],
     "dependencies": {
+        "@sentry/vite-plugin": "^4.4.0",
         "@spiriit/vite-plugin-svg-spritemap": "^5.0.0",
         "@vitejs/plugin-legacy": "^7.2.1",
         "autoprefixer": "^10.4.21",

@@ -54,7 +54,7 @@
         &__item {
             padding-left: 8px;
             flex-shrink: 0;
-            list-style-image: url('/__spritemap#sprite-list-view');
+            list-style-image: url('./list.svg');
             &::marker {
                 font-size: 28px;
             }

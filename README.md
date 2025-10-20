@@ -7,4 +7,4 @@
 – БЭМ;  
 – Оптимизация изображений и файлов;
 
-GH Pages:
+GH Pages: https://nikolay-s-web.github.io/test-task-2/

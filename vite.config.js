@@ -3,6 +3,7 @@ import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
 import autoprefixer from 'autoprefixer';
 import pxtorem from 'postcss-pxtorem';
 import legacy from '@vitejs/plugin-legacy';
+import { sentryVitePlugin } from '@sentry/vite-plugin';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { ghPages } from 'vite-plugin-gh-pages';
@@ -23,6 +24,13 @@ export default defineConfig({
         VitePluginSvgSpritemap('./src/assets/svg/*.svg'),
         ViteMinifyPlugin(),
         legacy(),
+        sentryVitePlugin({
+            project: process.env.SENTRY_PROJECT,
+            sourcemaps: {
+                include: '/dist',
+                urlPrefix: '~/',
+            },
+        }),
         ViteImageOptimizer({
             exclude: /\.(svg|webp|avif)$/i,
             jpeg: {
